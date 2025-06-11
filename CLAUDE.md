@@ -47,7 +47,7 @@ This file enables memory persistence for the Fire project repository.
 6. localStorage persistence
 
 ## Sample Data Structure
-Based on actual budget with McKinsey income ($12,927), various investments (401k, ROTH, S&P), expenses (rent, food, utilities), and accounts (SOFI-CHECK, CHASE-UML, etc.)
+Based on sample budget with generic income, various investments (401k, ROTH, Index Funds), expenses (rent, food, utilities), and anonymized account names
 
 ## Development Commands
 - `npm run dev` - Start development server with Turbopack
