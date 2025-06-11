@@ -181,7 +181,7 @@ export function BudgetProvider({ children }: { children: ReactNode }) {
     try {
       localStorage.setItem('fire-budget', JSON.stringify(state.currentBudget));
       localStorage.setItem('fire-selected-month', state.selectedMonth);
-    } catch (error) {
+    } catch {
       dispatch({ type: 'SET_ERROR', payload: 'Failed to save budget to storage' });
     }
   };
@@ -199,7 +199,7 @@ export function BudgetProvider({ children }: { children: ReactNode }) {
       if (savedMonth) {
         dispatch({ type: 'SET_SELECTED_MONTH', payload: savedMonth });
       }
-    } catch (error) {
+    } catch {
       dispatch({ type: 'SET_ERROR', payload: 'Failed to load budget from storage' });
     }
   };
@@ -211,7 +211,7 @@ export function BudgetProvider({ children }: { children: ReactNode }) {
     }, 1000); // Debounce saves by 1 second
 
     return () => clearTimeout(timeoutId);
-  }, [state.currentBudget, state.selectedMonth]);
+  }, [state.currentBudget, state.selectedMonth, saveToStorage]);
 
   // Load from storage on mount
   useEffect(() => {
