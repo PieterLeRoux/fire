@@ -38,33 +38,46 @@ This file enables memory persistence for the Fire project repository.
 - Debt: Amber (#f59e0b)
 - Spending: Blue (#3b82f6)
 
-## Project Structure (UPDATED)
+## Project Structure (MIGRATED TO ROOT)
 ```
-/src
-  /app - Next.js 14 App Router
-    layout.tsx - ThemeProvider + CssBaseline
-    page.tsx - Main dashboard
-    /dashboard - Dashboard routes
-  /components 
-    /budget - Budget-specific components (MUI-based)
-    /charts - @mui/x-charts components
-    /ui - Reusable MUI components
-    /layout - AppBar, Drawer, Navigation
-  /lib 
-    theme.ts - Material-UI theme configuration
-    utils.ts - Helper functions
-    types.ts - TypeScript interfaces
-  /hooks - Custom React hooks for state management
-  /contexts - React Context providers for budget data
-  /data - Sample data and constants
+/fire (ROOT DIRECTORY)
+  /src - Source code
+    /app - Next.js 15 App Router
+      layout.tsx - ThemeProvider + CssBaseline
+      page.tsx - Main dashboard
+      globals.css - Global styles
+    /components 
+      /budget - Budget-specific components (MUI-based)
+      /charts - @mui/x-charts components  
+      /ui - Reusable MUI components
+      /layout - AppBar, Navigation components
+    /lib 
+      theme.ts - Material-UI theme configuration
+      utils.ts - Helper functions
+    /types 
+      budget.ts - TypeScript interfaces
+    /hooks - Custom React hooks for state management
+    /contexts - React Context providers for budget data
+    /data - Sample data and constants (anonymized)
+  /public - Static assets
+  package.json - Dependencies and scripts
+  tsconfig.json - TypeScript configuration
+  next.config.ts - Next.js configuration
+  .eslintrc.json - ESLint configuration
+  .prettierrc - Prettier configuration
+  CLAUDE.md - This project memory file
+  README.md - Project documentation
 ```
 
-## Current Status (UPDATED)
-- ✅ **Decision made:** Fresh Next.js setup with Material-UI (not shadcn/ui)
-- ✅ **Technical spec completed:** Full Material-UI integration plan
-- ✅ **Design system defined:** FIRE theme with emerald green primary
-- ✅ **Dashboard layout planned:** 4 summary cards + 2 charts + 5 budget tables
-- 🎯 **Next step:** Fresh Next.js project creation with full MUI setup
+## Current Status (PHASE 1A COMPLETE)
+- ✅ **Fresh Next.js 15 project** created with TypeScript and App Router
+- ✅ **Material-UI integration** complete with custom FIRE theme
+- ✅ **Project structure** migrated to root directory for multi-phase expansion
+- ✅ **Sample data anonymized** - no specific companies, names, or sensitive numbers
+- ✅ **Core dashboard** implemented with 4 summary cards and category sections
+- ✅ **Professional design** matching Material Dashboard React aesthetic
+- ✅ **Build and linting** working perfectly with zero errors
+- 🎯 **Next step:** Phase 1B - Add charts and interactive tables with @mui/x-charts
 
 ## Key Features to Implement (Phase 1)
 ### **Dashboard Layout:**
